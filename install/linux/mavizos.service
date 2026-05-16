@@ -1,0 +1,28 @@
+[Unit]
+Description=MavizOS API and Web Desktop
+Documentation=https://github.com/MavizOS/MavizOS
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mavizos
+Group=mavizos
+WorkingDirectory=/opt/mavizos
+EnvironmentFile=-/opt/mavizos/.env
+ExecStart=/opt/mavizos/.venv/bin/mavizos serve
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=MavizOS-api
+
+# Hardening (adjust if integrations need broader filesystem access)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/mavizos /opt/mavizos/data /opt/mavizos/mavizos_fs
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MavizOS Desktop</title>
+  <link rel="stylesheet" href="/desktop/static/style.css" />
+</head>
+<body>
+  <div class="desktop">
+    <header class="titlebar">
+      <span class="logo">&#9670; MavizOS</span>
+      <span id="status-pill" class="pill">booting...</span>
+      <span class="demo-badge">DEMO - Simulated TI</span>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar">
+        <button class="nav active" data-panel="agents">Agents</button>
+        <button class="nav" data-panel="incidents">Incidents</button>
+        <button class="nav" data-panel="hunt">Hunt</button>
+        <button class="nav" data-panel="approvals">Approvals</button>
+        <button class="nav" data-panel="audit">Audit</button>
+        <button class="nav" data-panel="report">Report</button>
+      </nav>
+      <main class="panel-area">
+        <section id="panel-agents" class="panel visible">
+          <h2>Agent Services</h2>
+          <div id="agents-list" class="card-grid"></div>
+        </section>
+        <section id="panel-incidents" class="panel">
+          <h2>Incidents</h2>
+          <ul id="incidents-list" class="list"></ul>
+        </section>
+        <section id="panel-hunt" class="panel">
+          <h2>Threat Hunt</h2>
+          <textarea id="hunt-hypothesis" rows="3" placeholder="Enter hunt hypothesis..."></textarea>
+          <button id="hunt-run" class="btn primary">Run Hunt</button>
+          <pre id="hunt-result" class="output"></pre>
+        </section>
+        <section id="panel-approvals" class="panel">
+          <h2>Pending Approvals</h2>
+          <ul id="approvals-list" class="list"></ul>
+        </section>
+        <section id="panel-audit" class="panel">
+          <h2>Audit Log</h2>
+          <table id="audit-table">
+            <thead><tr><th>Time</th><th>Actor</th><th>Action</th><th>Outcome</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </section>
+        <section id="panel-report" class="panel">
+          <h2>Investigation Report</h2>
+          <input id="incident-id" placeholder="Incident ID" />
+          <button id="load-report" class="btn">Load</button>
+          <button id="run-investigate" class="btn primary">Run Sample Investigation</button>
+          <article id="report-view" class="report"></article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="/desktop/static/app.js"></script>
+</body>
+</html>

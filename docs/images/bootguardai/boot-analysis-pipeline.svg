@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" role="img" aria-label="BootGuardAI analysis pipeline">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+  <rect width="820" height="280" fill="#0d1117"/>
+  <text x="410" y="28" fill="#e6edf3" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600" text-anchor="middle">Boot Analysis Pipeline</text>
+
+  <rect x="40" y="55" width="120" height="55" rx="6" fill="#161b22" stroke="#58a6ff"/>
+  <text x="100" y="78" fill="#58a6ff" font-size="11" text-anchor="middle" font-family="Segoe UI, sans-serif">Context</text>
+  <text x="100" y="95" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">BCD / GRUB</text>
+  <text x="100" y="108" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">event logs</text>
+
+  <rect x="190" y="50" width="440" height="65" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="410" y="72" fill="#58a6ff" font-size="11" font-weight="600" text-anchor="middle" font-family="Segoe UI, sans-serif">10-STEP BOOT ANALYSIS WORKFLOW</text>
+  <text x="410" y="92" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">Collect ’ Parse ’ Correlate ’ Diagnose ’ Recommend ’ Gate fixes ’ Document</text>
+  <text x="410" y="106" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">Specialized boot / firmware / driver agents</text>
+
+  <rect x="660" y="55" width="120" height="55" rx="6" fill="#161b22" stroke="#3fb950"/>
+  <text x="720" y="78" fill="#3fb950" font-size="11" text-anchor="middle" font-family="Segoe UI, sans-serif">Report</text>
+  <text x="720" y="95" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">12 sections</text>
+  <text x="720" y="108" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">VFS output</text>
+
+  <line x1="160" y1="82" x2="188" y2="82" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="630" y1="82" x2="658" y2="82" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="410" y="145" fill="#e6edf3" font-size="11" text-anchor="middle" font-family="Segoe UI, sans-serif">12-Section Boot Diagnostic Report</text>
+  <rect x="60" y="160" width="700" height="95" rx="6" fill="#161b22" stroke="#30363d"/>
+  <text x="100" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Boot Summary</text>
+  <text x="190" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Chain Trace</text>
+  <text x="280" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Failures</text>
+  <text x="360" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Drivers</text>
+  <text x="440" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Secure Boot</text>
+  <text x="530" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Remediation</text>
+  <text x="630" y="182" fill="#8b949e" font-size="8" font-family="Segoe UI, sans-serif">Approval</text>
+  <text x="410" y="220" fill="#f0883e" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">Destructive boot fixes blocked until analyst approves</text>
+  <text x="410" y="238" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">BOOTGUARD_DEMO_MODE=true by default  disable for production</text>
+</svg>

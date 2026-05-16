@@ -1,0 +1,5 @@
+# BootGuardAI preseed (dedicated appliance — manual disk selection required)
+d-i debian-installer/locale string en_US
+d-i keyboard-configuration/xkb-keymap select us
+tasksel tasksel/first multiselect standard
+d-i finish-install/reboot_in_progress note

@@ -1,0 +1,8 @@
+{
+  "hostname": "MavizOS-soc-01",
+  "vfs_root": "./mavizos_fs",
+  "shell_prompt": "MavizOS>",
+  "boot_banner": true,
+  "demo_mode": true,
+  "services_autostart": true
+}

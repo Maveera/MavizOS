@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mavizos"
+version = "0.1.0"
+description = "Autonomous Agentic AI SOC Operating System"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.6,<1.0",
+    "uvicorn[standard]>=0.34.0,<1.0",
+    "pydantic>=2.11.0,<3.0",
+    "pydantic-settings>=2.7.0,<3.0",
+    "httpx>=0.28.1,<1.0",
+    "python-dotenv>=1.0.1,<2.0",
+    "rich>=13.9.0,<14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4,<9.0",
+    "pytest-asyncio>=0.25.2,<1.0",
+]
+bootguard = [
+    "fastapi>=0.115.6,<1.0",
+    "uvicorn[standard]>=0.34.0,<1.0",
+    "pydantic>=2.11.0,<3.0",
+    "pydantic-settings>=2.7.0,<3.0",
+    "httpx>=0.28.1,<1.0",
+    "python-dotenv>=1.0.1,<2.0",
+    "rich>=13.9.0,<14.0",
+]
+
+[project.scripts]
+mavizos = "mavizos.os.shell.main:cli_entry"
+bootguardai = "bootguardai.os.shell.main:cli_entry"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mavizos*", "bootguardai*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,24 @@
+[Unit]
+Description=BootGuardAI API and Boot Analysis Desktop
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bootguardai
+Group=bootguardai
+WorkingDirectory=/opt/bootguardai
+EnvironmentFile=-/opt/bootguardai/.env
+ExecStart=/opt/bootguardai/.venv/bin/python -m uvicorn bootguardai.main:app --host 0.0.0.0 --port 8081
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=bootguardai-api
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/bootguardai /opt/bootguardai/data /opt/bootguardai/bootguardai_fs
+
+[Install]
+WantedBy=multi-user.target

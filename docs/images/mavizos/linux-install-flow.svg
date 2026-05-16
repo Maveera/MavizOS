@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 200" role="img" aria-label="MavizOS Linux install flow">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+  <rect width="820" height="200" fill="#0d1117"/>
+  <text x="410" y="28" fill="#e6edf3" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600" text-anchor="middle">Linux Install Flow</text>
+
+  <rect x="30" y="55" width="130" height="50" rx="6" fill="#161b22" stroke="#58a6ff"/>
+  <text x="95" y="78" fill="#58a6ff" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">install.sh</text>
+  <text x="95" y="93" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">sudo root</text>
+
+  <rect x="190" y="55" width="150" height="50" rx="6" fill="#161b22" stroke="#3fb950"/>
+  <text x="265" y="78" fill="#3fb950" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">/opt/MavizOS</text>
+  <text x="265" y="93" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">user + venv</text>
+
+  <rect x="370" y="55" width="140" height="50" rx="6" fill="#161b22" stroke="#3fb950"/>
+  <text x="440" y="78" fill="#3fb950" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">systemd</text>
+  <text x="440" y="93" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">MavizOS.service</text>
+
+  <rect x="540" y="55" width="120" height="50" rx="6" fill="#161b22" stroke="#3fb950"/>
+  <text x="600" y="78" fill="#3fb950" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">API :8000</text>
+  <text x="600" y="93" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">health endpoint</text>
+
+  <rect x="690" y="55" width="100" height="50" rx="6" fill="#161b22" stroke="#3fb950"/>
+  <text x="740" y="78" fill="#3fb950" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">Shell</text>
+  <text x="740" y="93" fill="#8b949e" font-size="9" text-anchor="middle" font-family="Segoe UI, sans-serif">python -m</text>
+
+  <line x1="160" y1="80" x2="188" y2="80" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="340" y1="80" x2="368" y2="80" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="510" y1="80" x2="538" y2="80" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="660" y1="80" x2="688" y2="80" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="410" y="155" fill="#8b949e" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">ENABLE_AUTOLOGIN=1 for dedicated SOC console on tty1</text>
+  <text x="410" y="175" fill="#3fb950" font-size="10" text-anchor="middle" font-family="Segoe UI, sans-serif">Headless: API + reverse proxy TLS  no desktop required</text>
+</svg>

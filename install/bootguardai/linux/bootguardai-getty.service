@@ -1,0 +1,16 @@
+[Unit]
+Description=BootGuardAI console shell on tty1
+After=multi-user.target
+
+[Service]
+Type=simple
+User=bootguardai
+ExecStart=/opt/bootguardai/.venv/bin/python -m bootguardai
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+
+[Install]
+WantedBy=multi-user.target
